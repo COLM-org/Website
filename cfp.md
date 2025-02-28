@@ -71,9 +71,13 @@ Authors are required to follow the formatting directives of the template, includ
 
 ### Style Files and Templates
 
-To prepare your submission to COLM 2024, please use the LaTeX style files provided at:
+To prepare your submission to COLM 2025, please use the LaTeX style files provided at:
 
 [https://github.com/COLM-org/Template/archive/refs/tags/2025.zip](https://github.com/COLM-org/Template/archive/refs/tags/2025.zip)
+
+## Reciprocal Reviewing
+
+COLM 2025 has two reciprocal reviewing requirements: a 'per-submission' requirement, and a 'per-reviewer' requirement. The submission form will allow submitters to designate an author to fulfill the per-submission requirement, or to indicate that the submission is exempt from the requirement. Any author with 4 or more submissions will automatically be added to the reviewer pool, unless they are already part of the program committee or the COLM organization. More information about this requirement and its rationale is available in our [FAQ](/faq).
 
 ## Guides and Policies
 

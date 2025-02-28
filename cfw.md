@@ -3,7 +3,7 @@ We invite proposals for workshops to be held in tandem with the 2nd Conference o
 
 ---
 
-**Submission link:** to be posted on [https://colmweb.org/](https://colmweb.org/)
+**Submission:** please email your submission to [colm-workshops@googlegroups.com](mailto:colm-workshops@googlegroups.com)
 
 **Questions can be directed to:** [colm-workshops@googlegroups.com](mailto:colm-workshops@googlegroups.com)
 
