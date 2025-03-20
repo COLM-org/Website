@@ -17,10 +17,12 @@ FAQ:
         Answer: "We expect a reviewing load of up to 5 papers per reviewer."
   - Section: Submission
     QA:
+      - Question: Can I edit the submission information between the abstarct and full paper submission deadlines? 
+        Answer: "All fields will remain editable until the full paper submission deadline. However, we recommend to keep edits to a minimum, and only to necessary edits, so as to minimize any distruptions to the work of the program committee."      
       - Question: Will COLM allow for an extra page for the camera ready?
         Answer: "Yes, COLM will allow authors of accepted papers to add an extra page to the camera ready to add content following the reviewers and AC feedback."
       - Question: Can I submit my paper to COLM when it is under review for ARR/ICML/NeurIPS/etc?
-        Answer: "We are sorry, but COLM does not allow double submissions. All papers under the ARR process, regardless of stage, are considered as under submission to ARR, and cannot be submitted to COLM. COLM will conduct double submission checks following the full paper submission deadline. Only papers then under review will be checked. COLM cannot provide guarantees of compatiblity with regard to the policis and processes of other venues regarding double submissions."
+        Answer: "We are sorry, but COLM does not allow double submissions. All papers under the ARR process, regardless of stage, are considered as under submission to ARR, and cannot be submitted to COLM. COLM will conduct double submission checks following the full paper submission deadline. Only papers then under review will be checked. This means that papers withdrawn before, including abstracts with no full paper submitted, will not be considered or used for double submission checks. COLM cannot provide guarantees of compatiblity with regard to the policis and processes of other venues regarding double submissions, but this policy what we consider as under submission at COLM."
       - Question: When is the COLM submission open?
         Answer: "See the <a href='/dates'>dates page</a>"
       - Question: What is the COLM preprint policy?
@@ -47,6 +49,8 @@ FAQ:
         Answer: "COLM is an in-person conference only, and is unable to provide a virtual attance option."
       - Question: How can I get an invitation letter for a visa?
         Answer: "We are working on the process, and will provide more information to submitting authors after the submission deadline. If you are not a submitting author, please contact COLM a few week after the submission deadline."
+      - Question: What if none of the authors of an accepted paper can attend due to visa or other circumtances?
+        Answer: "We are making significant efforts that all authors can attend COLM, including by providing early registration options to start the visa process in advance and through the creation of travel grants. If no author can attend, we will allow the paper to be presented at COLM by a colleague. We believe this is not ideal, so ask to only use this option if all other options are exhausted. COLM is an in-person conference only, and all papers must be presented in person. If all the above options were truly exhausted, authors can contact the PCs to work out a solution. Before contacting the PCs, please make sure to have exhausted all other options in a timely and demonstrable manner. We will not be able to help if the authors have not demonstrated good-faith efforts to attend COLM."
   - Section: Other
     QA:
       - Question: How do you pronounce COLM?
