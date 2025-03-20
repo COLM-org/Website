@@ -11,8 +11,8 @@ We invite submissions to the 2nd Conference on Language Modeling (COLM).
 **Key Dates**  
 All deadlines are 23:59 AoE (anywhere on earth)
 
-* Abstract deadline: March 20, 2025  
-* Full paper submission deadline: March 27, 2025  
+* Abstract deadline: March 22, 2025  
+* Full paper submission deadline: March 28, 2025  
 * Rebuttal period: May 27 to June 10, 2025  
 * Decision notifications: July 7, 2025  
 * Conference dates: October 7-10, 2025

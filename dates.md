@@ -5,8 +5,8 @@
 ### Main Track Submission Timeline
 
 - **OpenReview submission site opens:** February 27, 2025
-- **Abstract deadline:** March 20, 2025
-- **Full paper submission deadline:** March 27, 2025
+- **Abstract deadline:** March 22, 2025
+- **Full paper submission deadline:** March 28, 2025
 - **Rebuttal period:** May 27 to June 10, 2025
 - **Decision notifications:** July 7, 2025
 - **Conference dates:** October 7-10, 2025
