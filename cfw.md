@@ -51,6 +51,8 @@ The workshop co-chairs will review all workshop submissions, except in cases whe
 
 ## Guides and Policies
 
+**Dual Submission.** Submission of workshop proposals that are or will be simultaneously under review for another venue is prohibited. Any workshop proposals that are revealed to be a dual submission will be desk rejected.
+
 **Conflict of Interest Policy.** The COLM program committee and all submitting authors must follow the COLM conflict of interest policy ([https://colmweb.org/coi-policy.html](https://colmweb.org/coi-policy.html)). Please consult the policy to update your OpenReview profile as requested. 
 
 **Code of Conduct.** All COLM participants, including workshop organizers, attendees, and speakers, are required to adhere to the COLM code of conduct ([https://colmweb.org/CoC.html](https://colmweb.org/CoC.html)). More detailed guidance for authors, reviewers, and all other participants will be made available in due course, and participation will require acknowledging and adhering to the provided guidelines.
