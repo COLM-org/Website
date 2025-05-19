@@ -8,7 +8,7 @@ For detailed submission instructions, including paper length and style file, ple
 
 **Appendices and Supplementary (text) submission:** We encourage authors to submit a single file (paper + appendices + supplementary text).  Please mark the supplementary material clearly.
 
-**Use of Generative AI Tool:** COLM follows [arXiv's guidelines](https://info.arxiv.org/help/moderation/index.html#policy-for-authors-use-of-generative-ai-language-tools) with regard to the use of generative AI tools, including large language models. 
+**Use of Generative AI Tools:** COLM follows [arXiv's guidelines](https://info.arxiv.org/help/moderation/index.html#policy-for-authors-use-of-generative-ai-language-tools) with regard to the use of generative AI tools, including large language models. 
 
 **Note:** All authors are required to have an OpenReview profile. Please make sure that all of the authors create an OpenReview profile.
 
