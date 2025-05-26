@@ -71,7 +71,7 @@ def favicon():
 def home():
     data = _data()
     data["readme"] = open("README.md").read()
-    data["committee"] = site_data["committee"]["committee"]
+    # data["committee"] = site_data["committee"]["committee"]
     return render_template("index.html", **data)
 
 
@@ -263,6 +263,7 @@ def coi_policy():
 def committees():
     data = _data()
     data["committee"] = site_data['committee']['committee']
+    data["AreaChairs"] = open("AreaChairs.md").read()
     return render_template("committees.html", **data)
 
 @app.route("/AuthorGuide.html")
