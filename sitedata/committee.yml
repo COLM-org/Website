@@ -41,12 +41,44 @@ committee:
     im: static/images/Adina.jpg
     tw:
     ws: https://ai.meta.com/people/1396973444287406/adina-williams/
+  
+  - role: DEI Chair
+    name: Julia Kreutzer
+    aff: Cohere for AI
+    im: static/images/julia_kreutzer.jpeg
+    tw: 
+    ws: https://juliakreutzer.github.io/
+
+  - role: DEI Chair
+    name: Antoine Bosselut
+    aff: EPFL
+    im: static/images/antoine_bosselut.jpg
+    tw: 
+    ws: https://atcbosselut.github.io/
+
+  - role: Ethics Chair
+    name: Mor Geva
+    aff: Tel Aviv University / Google Research
+    im: static/images/mor_geva.jpg
+    tw: 
+    ws: https://mega002.github.io/
+
+
+  - role: Ethics Chair
+    name: Raquel Fernández
+    aff: University of Amsterdam / ILLC
+    im: static/images/raquel_fernandez.png
+    tw: 
+    ws: https://staff.fnwi.uva.nl/r.fernandezrovira/
+
+
   - role: Local Chair
     name: Siva Reddy
     aff: McGill-MILA / ServiceNow
     im: static/images/siva.jpg
     tw: sivareddyg
     ws: https://sivareddy.in/
+
   - role: Organizational Chair
     name: Alexander Rush
     aff: Cornell Tech, Hugging Face
