@@ -215,9 +215,9 @@ workshopgroup
 <div class="cards row">
   {% for workshop in workshops %}
   <div class="col-md-6 col-sm-12 p-3" style="box-sizing: border-box;">
-    <div class="card" style="display: block; overflow: hidden; width: 100%;">
+    <div class="card h-100" style="display: block; overflow: hidden; width: 100%;">
       <div
-        class="card-header text-center"
+        class="card-header text-center d-flex flex-column h-100"
         style="min-height: 150px; width: 100%;"
       >
         <a class="text-muted" href="{{workshop.url}}">
@@ -225,7 +225,7 @@ workshopgroup
             {{workshop.title}}
           </h3>
         </a>
-        <a class="text" href="{{workshop.cfp_url}}">
+        <a class="text mt-auto" href="{{workshop.cfp_url}}">
           <div class="m-3 text-center">
             Call For Papers
           </div>
