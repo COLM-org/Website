@@ -5,7 +5,7 @@ name: Deploy COLM Website
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-deploy:
