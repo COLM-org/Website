@@ -254,6 +254,7 @@ def reviewguide():
     data["ReviewGuide"] = open("ReviewGuide.md").read()
     return render_template("ReviewGuide.html", **data)
 
+
 @app.route("/coi-policy.html")
 def coi_policy():
     data = _data()
@@ -264,15 +265,17 @@ def coi_policy():
 @app.route("/committees.html")
 def committees():
     data = _data()
-    data["committee"] = site_data['committee']['committee']
+    data["committee"] = site_data["committee"]["committee"]
     data["AreaChairs"] = open("AreaChairs.md").read()
     return render_template("committees.html", **data)
+
 
 @app.route("/AuthorGuide.html")
 def authorguide():
     data = _data()
     data["AuthorGuide"] = open("AuthorGuide.md").read()
     return render_template("AuthorGuide.html", **data)
+
 
 @app.route("/ac-guidelines.html")
 def ac_guidelines():
