@@ -2,19 +2,26 @@
 # Trigger on pushes to the main branch (adjust if your default branch is named differently)
 name: Deploy COLM Website
 
+# Grant write permissions for contents so the action can push to gh-pages
+permissions:
+  contents: write
+
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Check out the repository
+      # 1. Check out the repository (with credentials persisted for downstream steps)
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
       # 2. Set up Python environment
       - name: Set up Python 3.x
