@@ -5,7 +5,7 @@ citation_date: May 2025
 proceedings_title: Proceedings of the Second COLM Conference
 analytics: UA-
 logo:
-  image: static/images/logo.png
+  image: static/images/logo.svg
   width: 180px
   height: auto
 # uncomment the following line to show the site title next to the logo image
