@@ -4,6 +4,12 @@ To change the COLM website, first setup your venv. Then:
 
 > pip install -r requirements.txt
 
+You may also need to install the following packages for linting:
+
+```bash
+# mac:
+brew install node
+```
 To see the website run 
 
 > make run
