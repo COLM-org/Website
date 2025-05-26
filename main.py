@@ -258,6 +258,13 @@ def coi_policy():
     data["coiPolicy"] = open("coi-policy.md").read()
     return render_template("coi-policy.html", **data)
 
+
+@app.route("/committees.html")
+def committees():
+    data = _data()
+    data["committee"] = site_data['committee']['committee']
+    return render_template("committees.html", **data)
+
 @app.route("/AuthorGuide.html")
 def authorguide():
     data = _data()
