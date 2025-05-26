@@ -1,61 +1,70 @@
-# GitHub Actions workflow to build and deploy the COLM website to the gh-pages branch
-# Trigger on pushes to the main branch (adjust if your default branch is named differently)
+# Workflow for building and deploying the COLM website to GitHub Pages
 name: Deploy COLM Website
 
-# Grant write permissions for contents so the action can push to gh-pages
-permissions:
-  contents: write
-
 on:
+  # Trigger on pushes to the master branch
   push:
-    branches:
-      - master
+    branches: ["master"]
+
+  # Manual trigger
+  workflow_dispatch:
+
+# Grant the GITHUB_TOKEN permissions needed for Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  # Build job: install deps, build static site
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      # 1. Check out the repository (with credentials persisted for downstream steps)
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true
 
-      # 2. Set up Python environment
-      - name: Set up Python 3.x
+      - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.10'
 
-      # 3. Install Node.js (for linting/tools if needed)
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      # 4. Install Python dependencies
-      - name: Install Python dependencies
+      - name: Create and activate venv, install Python dependencies
         run: |
           python -m venv venv
           source venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
-          # If you need additional linting tools installed via npm, uncomment:
-          # npm install
 
-      # 5. Build the website
-      - name: Build site
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Build static site
         run: |
           source venv/bin/activate
           make freeze
 
-      # 6. Deploy to gh-pages branch
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish_branch: gh-pages
-          keep_files: false
+          path: build
+
+  # Deployment job: deploy the artifact to GitHub Pages
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy-pages
+        uses: actions/deploy-pages@v4
+        with:
+          artifact: build
