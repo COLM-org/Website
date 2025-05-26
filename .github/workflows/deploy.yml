@@ -1,74 +1,54 @@
+# GitHub Actions workflow to build and deploy the COLM website to the gh-pages branch
+# Trigger on pushes to the main branch (adjust if your default branch is named differently)
 name: Deploy COLM Website
 
 on:
   push:
     branches:
-      - master    # or whatever your default branch is
+      - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write   # needed to push to other repo
-      pages: write
 
     steps:
-    # 1) Checkout the Website repo
-    - name: Checkout Website repo
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+      # 1. Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    # 2) Set up Python
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
+      # 2. Set up Python environment
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    # 4) Install Python dependencies
-    - name: Install Python deps
-      run: |
-        python -m venv .venv
-        source .venv/bin/activate
-        pip install --upgrade pip
-        pip install -r requirements.txt
+      # 3. Install Node.js (for linting/tools if needed)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
-    # 5) Install any npm deps (if your Makefile needs them)
-    - name: Install Node deps
-      run: |
-        npm install
+      # 4. Install Python dependencies
+      - name: Install Python dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          # If you need additional linting tools installed via npm, uncomment:
+          # npm install
 
-    # 6) Build the site
-    - name: Build site (make freeze)
-      run: |
-        source .venv/bin/activate
-        make freeze
+      # 5. Build the website
+      - name: Build site
+        run: |
+          source venv/bin/activate
+          make freeze
 
-    # 7) Checkout the target repo into a subdirectory
-    - name: Checkout gh-pages repo
-      uses: actions/checkout@v3
-      with:
-        repository: COLM-org/colm-org.github.io
-        token: ${{ secrets.GITHUB_TOKEN }}
-        ref: deploy
-        path: gh-pages
-
-    # 8) Copy build output into the gh-pages directory
-    - name: Copy built site
-      run: |
-        rm -rf gh-pages/*
-        cp -R build/* gh-pages/
-
-    # 9) Commit & push
-    - name: Commit & Push changes
-      working-directory: gh-pages
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        if [ -n "$(git status --porcelain)" ]; then
-          git add .
-          git commit -m "Automated deploy: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          git push origin deploy
-        else
-          echo "No changes to deploy."
-        fi
+      # 6. Deploy to gh-pages branch
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
+          keep_files: false
