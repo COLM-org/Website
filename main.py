@@ -16,7 +16,7 @@ by_uid = {}
 
 def main(site_data_path):
     global site_data, extra_files
-    extra_files = ["README.md", "cfp.md", "program-overview.md"]
+    extra_files = ["README.md", "cfp.md", "program-overview.md", "plenary.md"]
     # Load all for your sitedata one time.
     for f in glob.glob(site_data_path + "/*"):
         extra_files.append(f)
@@ -330,6 +330,13 @@ def faq():
     data = _data()
     data["FAQ"] = site_data["faq"]["FAQ"]
     return render_template("faq.html", **data)
+
+
+@app.route("/plenary.html")
+def plenary():
+    data = _data()
+    data["plenary"] = site_data["plenary"]["plenary"]
+    return render_template("plenary.html", **data)
 
 
 # FRONT END SERVING
