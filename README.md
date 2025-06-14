@@ -1,5 +1,8 @@
 ## COLM
 
+> [!warning]
+> The content of this repository was moved to `colm-org/colm-org.github.io`, which has been updated to deploy to GH pages from GH actions instead of being built from branch. For more details, see commit [ec196b9ecdd4388d034812ca6b2239fd66c21aa4](https://github.com/COLM-org/colm-org.github.io/commit/f8ba9bce8e1871dda2cccffd194adff2f4e02a73). Thus, this page is archived and is maintained for reference.
+
 To change the COLM website, first setup your venv. Then: 
 
 ```bash
